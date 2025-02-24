@@ -21,3 +21,22 @@ git clone https://github.com/Olchyk/Game-Butterfly-catcher-.git
 cd Game-Butterfly-catcher-
 npm install
 npm run start
+
+🛠 Technologies Used
+Phaser 3 – for game development 🎮
+TypeScript – for structured and maintainable code ✨
+Webpack – for project bundling 📦
+📌 Features
+✅ Multiple difficulty levels
+✅ Unique backgrounds for each level
+✅ Character and object animations
+✅ Platforms that appear for extra jumps
+✅ A flying bat 🦇 in hard mode as an extra challenge
+✅ Background music during gameplay 🎵
+✅ Score history saved (until the page is refreshed)
+✅ View your full game history
+✅ Button to clear your score history
+
+🏆 Author
+👩‍💻 Olchyk
+🎨 Idea, code, and implementation
