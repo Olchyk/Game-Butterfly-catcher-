@@ -18,7 +18,7 @@ Phaser 3 – for game development 🎮
 TypeScript – for structured and maintainable code ✨
 Webpack – for project bundling 📦
 
-##📌 Features
+## 📌 Features
 ✅ Multiple difficulty levels
 ✅ Unique backgrounds for each level
 ✅ Character and object animations
@@ -29,7 +29,7 @@ Webpack – for project bundling 📦
 ✅ View your full game history
 ✅ Button to clear your score history
 
-##🏆 Author
+## 🏆 Author
 👩‍💻 Olchyk
 🎨 Idea, code, and implementation
 
