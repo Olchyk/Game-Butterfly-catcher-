@@ -12,21 +12,13 @@ The game features multiple difficulty levels, score saving, and even background 
 6. Background music plays throughout the game 🎵.
 7. The game ends when time runs out.
 
-## 🚀 Run the Game
-### 🔹 Locally
-To run the game on your computer, execute these commands:
 
-```sh
-git clone https://github.com/Olchyk/Game-Butterfly-catcher-.git
-cd Game-Butterfly-catcher-
-npm install
-npm run start
-
-🛠 Technologies Used
+## 🛠 Technologies Used
 Phaser 3 – for game development 🎮
 TypeScript – for structured and maintainable code ✨
 Webpack – for project bundling 📦
-📌 Features
+
+##📌 Features
 ✅ Multiple difficulty levels
 ✅ Unique backgrounds for each level
 ✅ Character and object animations
@@ -37,6 +29,16 @@ Webpack – for project bundling 📦
 ✅ View your full game history
 ✅ Button to clear your score history
 
-🏆 Author
+##🏆 Author
 👩‍💻 Olchyk
 🎨 Idea, code, and implementation
+
+## 🚀 Run the Game
+### 🔹 Locally
+To run the game on your computer, execute these commands:
+
+```sh
+git clone https://github.com/Olchyk/Game-Butterfly-catcher-.git
+cd Game-Butterfly-catcher-
+npm install
+npm run start
