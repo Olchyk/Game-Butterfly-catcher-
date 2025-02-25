@@ -42,7 +42,7 @@ export default class MainMenuScene extends Phaser.Scene {
           fontFamily: "'Tiny5', serif",
         }
       )
-      .setOrigin(0.5); // Центруємо відносно середини
+      .setOrigin(0.5);
 
     const startButton = this.add
       .text(this.scale.width / 2, this.scale.height / 2, "▶ Розпочати гру", {
@@ -50,11 +50,10 @@ export default class MainMenuScene extends Phaser.Scene {
         color: "#8000ff",
         fontFamily: "'Tiny5', serif",
       })
-      .setOrigin(0.5, 0.5) // Центруємо текст відносно його координат
+      .setOrigin(0.5, 0.5)
       .setInteractive();
 
     startButton.on("pointerdown", () => {
-      // ✅ Переконуємось, що використовується WebAudio перед доступом до `context`
       if (this.sound instanceof Phaser.Sound.WebAudioSoundManager) {
         if (this.sound.context.state === "suspended") {
           this.sound.context.resume().then(() => {
@@ -71,7 +70,6 @@ export default class MainMenuScene extends Phaser.Scene {
       this.scene.start("SelectDifScene");
     });
 
-    // ✅ Перевіряємо, чи існує анімація перед створенням
     if (!this.anims.exists("fly")) {
       this.anims.create({
         key: "fly",
@@ -88,7 +86,7 @@ export default class MainMenuScene extends Phaser.Scene {
       this.spawnFlyingButterfly();
     }
 
-    const { width, height } = this.scale; // Отримуємо ширину і висоту сцени
+    const { width, height } = this.scale;
 
     const historyButton = this.add
       .text(width / 2, height / 2 + 70, "📜 Історія очок", {
@@ -113,18 +111,17 @@ export default class MainMenuScene extends Phaser.Scene {
       .setScale(2)
       .play("fly");
 
-    // ❗ Один tween замість двох
     this.tweens.add({
       targets: butterfly,
-      x: "+=" + Phaser.Math.Between(-150, 150), // Рухатись по горизонталі
-      y: "+=" + Phaser.Math.Between(-50, 50), // Коливатися вгору-вниз
+      x: "+=" + Phaser.Math.Between(-150, 150),
+      y: "+=" + Phaser.Math.Between(-50, 50),
       duration: Phaser.Math.Between(2500, 4000),
       yoyo: true,
       repeat: -1,
       ease: "Sine.easeInOut",
     });
 
-    const flightType = Phaser.Math.Between(1, 3); // Випадковий політ
+    const flightType = Phaser.Math.Between(1, 3);
 
     if (flightType === 1) {
       // 🌀 Хаотичний рух
@@ -150,7 +147,6 @@ export default class MainMenuScene extends Phaser.Scene {
         rotation: "+=0.1",
       });
     } else {
-      // ↕️ Вертикальні коливання
       this.tweens.add({
         targets: butterfly,
         y: "+=" + Phaser.Math.Between(-150, 150),
